@@ -1,4 +1,4 @@
-# Cron Jobs 
+# Cron Jobs
 
 ## Instalación
 
@@ -20,24 +20,25 @@ UPDATE clients SET
 WHERE id = 1;
 ```
 
-### 4. Ejecutar setup.sql
-- Abrir `setup.sql` en MySQL Workbench
-- Reemplazar `tu_password` por la contraseña que quieras usar para `docker_user`
-- Descomentar y agregar los permisos para cada base de datos de tus clientes
-- Ejecutar el script
+### 4. Configurar variables de entorno
 
-### 5. Configurar variables de entorno
+Mac/Linux
 ```bash
 cp .env.example .env
 ```
-Debes llenar TENANT_DB_PASSWORD con la contraseña que pusiste en el paso 3 de setup.sql y TENANT_DB_USER con docker_user
+Windows:
+```bash
+copy .env.example .env
+```
 
-### 6. Correr el proyecto
+Llenar el `.env` con tu usuario y contraseña de MySQL
+
+### 5. Correr el proyecto
 ```bash
 docker compose up --build
 ```
 
-### 7. Verificar que funciona
+### 6. Verificar que funciona
 ```bash
 docker logs -f cron_jobs-app-1
 ```
