@@ -1,4 +1,4 @@
-from tenant_connection import get_tenant_connection
+from config.tenant_connection import get_tenant_connection
 
 
 def get_clients():

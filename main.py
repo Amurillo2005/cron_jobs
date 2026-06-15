@@ -2,10 +2,10 @@ import schedule
 import time
 from datetime import datetime
 
-from tenant_service import get_clients
-from client_connection import connect_client
-from test_ranking import ranking_general
-from test_ranking import ranking_week
+from services.tenant_service import get_clients
+from db.client_connection import connect_client
+from rankings.test_ranking import ranking_general
+from rankings.test_ranking import ranking_week
 
 get_clients_db = get_clients()
 client_index = 0
